@@ -21,6 +21,11 @@ class UsersController extends GetxController {
     });
     super.onInit();
   }
+  @override
+  void onClose() {
+    scrollController.dispose();
+    super.onClose();
+  }
 
   Future<void> onRefresh() async {
     page = 1;

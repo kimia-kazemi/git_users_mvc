@@ -124,7 +124,6 @@ class _SlidingGradientTransform extends GradientTransform {
 
   @override
   Matrix4 transform(Rect bounds, {TextDirection? textDirection}) {
-    // اطمینان حاصل کنید که slidePercent معتبر است
     final validSlidePercent = slidePercent.clamp(0.0, 1.0);
     return Matrix4.translationValues(
         bounds.width * validSlidePercent, 0.0, 0.0);
